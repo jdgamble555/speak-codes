@@ -1,0 +1,1 @@
+<p>© 2022 Speak.Codes</p>

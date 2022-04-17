@@ -1,0 +1,46 @@
+@use 'sass:color';
+
+@use '@material/theme/color-palette';
+
+// Svelte Colors! (Dark Theme)
+@use '@material/theme/index' as theme with (
+	$primary: #000,
+	$secondary: color.scale(#00695c, $whiteness: -10%),
+	$surface: #303030,
+	$background: #fff,
+	$error: color-palette.$red-700
+);
+
+html,
+body {
+	background-color: #424242;
+	color: theme.$on-surface;
+	height: 100%;
+	min-height: 100%;
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+a {
+	color: #80cbc4;
+}
+a:visited {
+	color: color.scale(#4db6ac, $lightness: -35%);
+}
+
+// text field
+.mdc-text-field--focused .mdc-floating-label {
+	color: #cfd8dc !important;
+}
+.mdc-text-field--focused .mdc-notched-outline__leading,
+.mdc-text-field--focused .mdc-notched-outline__notch,
+.mdc-text-field--focused .mdc-notched-outline__trailing {
+	border-color: #cfd8dc !important;
+}
+.mdc-text-field--focused .mdc-text-field__input {
+	caret-color: #cfd8dc !important;
+}
+
+.card-text {
+	color: white !important;
+}

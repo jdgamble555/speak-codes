@@ -1,0 +1,31 @@
+@use 'sass:color';
+
+@use '@material/theme/color-palette';
+
+// Svelte Colors!
+@use '@material/theme/index' as theme with (
+	$primary: #004d40,
+	$secondary: #26a69a,
+	$surface: #fff,
+	$background: #fff,
+	$error: color-palette.$red-900
+);
+
+html,
+body {
+	background-color: theme.$surface;
+	color: theme.$on-surface;
+	height: 100%;
+	min-height: 100%;
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+a {
+	color: #80cbc4;
+}
+a:visited {
+	color: color.scale(#4db6ac, $lightness: -35%);
+}
+
+// https://svelte-materialify.vercel.app/styles/colors/#color-pack
